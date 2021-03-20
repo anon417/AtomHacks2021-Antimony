@@ -1,0 +1,257 @@
+body {
+    min-height: 100%;
+    background:
+        linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), 
+        url('https://media.wired.com/photos/5d795321933a7300086dc3cb/master/w_2560%2Cc_limit/Science_190710_Plastic_Catch_Twilight_Inspection-2.jpg');
+    backdrop-filter: blur(4px);
+    background-size: cover;
+    font-family: 'Rubik', sans-serif;
+}
+
+html, body {
+    margin:0;border:0;padding:0;
+    font-size:16px;
+    overflow-x:hidden;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  html {
+      -webkit-font-smoothing: antialiased;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 14px 40px;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    border: 2px solid #224d73;
+  }
+
+  .button:hover {
+      background-color: #224d73;
+      color: white;
+  }
+
+  .input-label {
+      font-weight: light;
+      padding-right: 6px;
+  }
+
+  .large {font-size:22px; font-weight: bold;}
+  .small {font-size:18px;}
+  
+  h1 {font-size:40px;}
+  h2 {font-size:36px;}
+  h3 {font-size:30px;}
+  h4 {font-size:24px;}
+  h5 {font-size:20px;}
+  h6 {font-size:18px;}
+  
+  h2 {
+    padding-bottom: 14px;
+  }
+
+  input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid white;
+  }
+
+  select {
+    border: 0.0001px solid #fff;
+    background-color: rgba(255,255,255,0);
+    padding: 5px;
+    text-align: right;
+  }
+
+  option {
+    color: black;
+  }
+
+  ::placeholder {
+    color:white;
+    opacity: 1;
+    font-weight: 100;
+  }
+  
+  :-ms-input-placeholder {
+    color: white;
+    opacity: 1;
+    font-weight: 100;
+  }
+  
+  ::-ms-input-placeholder {
+    color: white;
+    opacity: 1;
+    font-weight: 100;
+  }
+  
+  .accent {
+    font-family: 'Proxima Bold';
+    line-height: 14px;
+    color: #224d73;
+  }
+
+  .blue-accent {
+    font-family: 'Proxima Bold';
+    line-height: 14px;
+    color: #ffffff;
+  }
+  
+  .bold {
+      font-weight: bold;
+  }
+  
+  .tm-border {
+      border: 5px solid #fff;
+      box-shadow: 2px 2px #000;
+  }
+  
+  .shadow {
+      text-shadow: 1px 1px #000;
+  }
+  
+  .tm-title {
+      color: #57b3e8;
+      text-shadow: 4px 4px 0px black;
+  }
+  
+  .white {
+    color: #fff;
+  }
+
+  .white:hover a {
+    text-decoration: none;
+    color: white;
+    filter: brightness(85%);
+  }
+  
+  .about,.stats,
+  .help,.info,
+  .submit, .input {
+    padding: 40px;
+    min-height: 330px;
+  }
+  
+  .help, .info,
+  .submit, .input {
+    margin-top: 30px;
+  }
+
+  header {
+    text-align: center;
+    min-height: 400px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 160px;
+    padding-bottom: 140px;
+  }
+  header img {
+    display: inline-block !important;
+  }
+  header hr {
+    border-color: #3366CC;
+    width: 100px;
+  }
+  
+  .about {
+    background: #fff;
+    box-shadow: 0px 1px 5px rgba(50,50,50,0.08);
+  }
+  
+  .stats {
+    background: #224d73;
+    color: #f5f5f5;
+  }
+  
+  .help {
+    background: #224d73;
+    color: #f5f5f5;
+  }
+  .help .help-content {
+    padding-bottom: 14px;
+  }
+  .help h5 {
+    display: inline-block;
+  }
+  .help span {
+    padding-right: 1px;
+  }
+  
+  .info {
+    background: #fff;
+   box-shadow: 0px 1px 5px rgba(50,50,50,0.08);
+  }
+  .info ul {
+    padding: 10px;
+  }
+  .info ul li {
+    padding-bottom: 6px;
+  }
+
+  .submit {
+    background: #fff;
+    box-shadow: 0px 1px 5px rgba(50,50,50,0.08);
+  }
+
+  .input {
+    background: #224d73;
+    color: #f5f5f5;
+  }
+  
+  footer {
+    color: #f9f9f9;
+    text-align: center;
+    padding-top: 140px;
+    padding-bottom: 100px;
+  }
+  
+  .social-icons {
+    padding: 0;
+    margin: 0;
+  }
+  .social-icons li {
+    display: inline-block;
+    list-style: none;
+  }
+  .social-icons li a {
+    background: #224d73;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    transition: all 0.05s ease-in;
+    position: relative;
+    bottom: 10px;
+    top: 10px;
+  }
+  .social-icons li a:hover {
+    background: #202020;
+    color: #fff;
+  }
+  
+  @media ( max-width: 980px ) {
+    .stats {
+      margin-top: 30px;
+    }
+  }
+  
+  @media ( max-width: 360px ) {
+    header h1 {
+      font-size: 30px;
+    }
+    .about h2 {
+      font-size: 24px;
+    }
+    .help h4,
+    .input h4 {
+      font-size: 20px;
+    }
+  }

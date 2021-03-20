@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="The simple tool to track your plastic consumption.">
+    <meta name="author" content="AtomHacks 2021">
+    <title>Antimony</title>
+    <link href="style.css" rel="stylesheet" type="text/css" /> <!-- credit to http://www.templatemo.com/tm-467-easy-profile for styling -->
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel='icon' href='https://cdn.discordapp.com/attachments/819008125033513011/822852670523703306/hackathon_2021_logo.png' type='image/x-icon' />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body style="font-family: 'Rubik', sans-serif;">
+    <script src="script.js" type="text/javascript"></script>
+    <script src="bootstrap.min.js" type="text/javascript"></script>
+
+    <!-- header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <img src="https://cdn.discordapp.com/attachments/819008125033513011/822852670523703306/hackathon_2021_logo.png" style="filter: brightness(130%);" class="img-responsive" width="20%" height="20%">
+                    <hr>
+                    <h1 class="tm-title bold shadow" style="font-size: 60px">Antimony</h1>
+                    <h1 class="white bold shadow" style="text-shadow: 3px 3px 0px black;">The simple tool to track your plastic consumption.</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- about and statistics -->
+    <section class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <div class="about">
+                    <h3 class="accent">About the Issue</h3><br>
+                    <p>Every year, over 8 million tons of plastic ends up in our oceans, poisoning sea life and destroying our planet. This issue is not going to solve itself. There is only one way to solve this problem, and that's by creating awareness throughout the world. Believe it or not, most people are uniformed about the severity of the situation. This means we must get people like YOU to take action. In small steps, we are helping our environment, and leaving a better world for future generations.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="stats" style="text-align: center;">
+                    <img style="filter: brightness(140%);" src="https://cdn.discordapp.com/attachments/819008125033513011/822927600845455390/4a59c62ee9f7cb7ba61fcbe8aa1a2020.png" width="52%">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- how can you help and website info -->
+    <section class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <div class="help">
+                    <h2 class="white"><a href="https://www.epa.gov/recycle" class="white">How can I help?</a></h2>
+                    <span class="help-title blue-accent large">Reduce</span><span class="small" style="font-size: 16px"> your total plastic usage. Only use plastic when necessary, and try to choose products with less packaging.</span>
+                    <br><br><span class="help-title blue-accent large">Reuse</span><span class="small" style="font-size: 16px"> old plastic instead of throwing it away. Instead of buying a new water bottle, refill it with water from home. Avoid disposable items like plastic shopping bags and styrofoam.</span>
+                    <br><br><span class="help-title blue-accent large">Recycle</span><span class="small" style="font-size: 16px"> plastic back into the system, so it doesn't need to be thrown away. When purchasing items, try to find things that can be recycled.</span>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="info">
+                    <h3 class="accent">About this Website</h3>
+                    <br>
+                    <p>This website was developed for the 2021 AtomHacks competition. Weight averages were determined based on unit weights for the most common brands as well as experimentally determined weights from various studies. Total plastic calculations are the sum of the total weights of each item.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- input and consumption calculations -->
+    <section class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12" style="text-align: center;">
+                <div class="submit">
+                    <div id="results" style="text-align: left;">
+                        <p>Most used material: <span style="font-weight: bold;" id="mostused"></span></p>
+                        <p>Usage of material: <span style="font-weight: bold;" id="mostusage"></span></p>
+                        <p>Total plastic consumption: <span style="font-weight: bold;" id="totalusage"></span></p>
+                        <p>Average consumption per week: <span style="font-weight: bold;" id="avgconsumption"></span></p>
+                        <p id="tips" style="font-weight: bold;"></p>
+                    </div>
+                    <br><br><span id="button"><button type="button" class="button" style="text-align: center;" onclick="execute()">See my consumption</button></span>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-12">
+                <div class="input">
+                    <h2 class="white">How much plastic do I use every week?</h2><br>
+
+                    <div style="float: left; width: 50%; line-height: 2">
+                        <label for="name"><span class="input-label">Name:</span>
+                            <input type="text" size="20" id="name" name="name" style="color: white;">
+                        </label><br>
+
+                        <label for="bottles"><span class="input-label">Plastic Bottles:</span>
+                            <input type="text" size="5" id="bottles" name="bottles" style="color: white;">
+                            <select id="bottleSize" name="bottleSize" style="color: white;">
+                                <option value="size" selected>Size</option>
+                                <option value="small">Small</option>
+                                <option value="avg" >Average</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </label><br>
+
+                        <label for="bags"><span class="input-label">Plastic Bags:</span>
+                            <input type="text" size="5" id="bags" name="bags" style="color: white;">
+                            <select id="bagSize" name="bagSize" style="color: white;">
+                                <option value="size" selected>Size</option>
+                                <option value="small">Small</option>
+                                <option value="avg">Average</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </label><br>
+
+                        <label for="straws"><span class="input-label">Plastic Straws:</span>
+                            <input type="text" size="5" id="straws" name="straws" style="color: white;">
+                            <select id="strawSize" name="strawSize" style="color: white;">
+                                <option value="size" selected>Size</option>
+                                <option value="small">Small</option>
+                                <option value="avg">Average</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </label><br>
+                    </div>
+
+                    <div style="float: right; width: 50%; line-height: 2">
+                        <label for="styrofoam"><span class="input-label">Styrofoam:</span>
+                            <input type="text" size="10" id="styrofoam" name="styrofoam" style="color: white;"><span>  grams</span>
+                        </label><br>
+
+                        <label for="utensils"><span class="input-label">Plastic Utensils:</span>
+                            <input type="text" size="5" id="utensils" name="utensils" style="color: white;">
+                            <select id="utensilSize" name="utensilSize" style="color: white;">
+                                <option value="size" selected>Size</option>
+                                <option value="small">Small</option>
+                                <option value="avg">Average</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </label><br>
+
+                        <label for="containers"><span class="input-label">Plastic Containers:</span>
+                            <input type="text" size="5" id="containers" name="containers" style="color: white;">
+                            <select id="containerSize" name="containerSize" style="color: white;">
+                                <option value="size" selected>Size</option>
+                                <option value="small">Small</option>
+                                <option value="avg">Average</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </label><br>
+
+                        <label for="ziplocs"><span class="input-label">Ziploc Bags:</span>
+                            <input type="text" size="5" id="ziplocs" name="ziplocs" style="color: white;">
+                            <select id="ziplocSize" name="ziplocSize" style="color: white;">
+                                <option value="size" selected>Size</option>
+                                <option value="small">Small</option>
+                                <option value="avg">Average</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </label><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/BxSciHackathoners" class="fa fa-facebook"></a></li>
+                        <li><a href="https://www.instagram.com/bxsciatomhacks/" class="fa fa-google-plus"></a></li>
+                        <li><a href="https://github.com/atomhacks" class="fa fa-github"></a></li>
+                        <li><a href="mailto:atomhacks@bxscience.edu" class="fa fa-envelope-o"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
